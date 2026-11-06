@@ -10,12 +10,54 @@ my program will ask the user for one color out of the 3 primary colors. red, yel
 
 # Test results
 # Program 1: BMI Calculator
+Inputs (weight, height)         Expected result        Actual result          Match or correction
+
+100, 70                        14.35 – Underweight       Underweight                 match
+
+
+150, 70                         21.52 – Optimal weight    Optimal weight                 match
+
+200, 70                          28.69 – Overweight          Overweight                 match
+
+150, 0                              Error message             erro                 match
+
+-150, 70                            Error message             erro                 match
+
+101.4, 62                       18.55 – Optimal weight      Optimal weight         match
+ 
+
+my results:
 Enter your weight in pounds: 101.4
 Enter your height in inches: 50
 Your BMI is: 28.51
 Category: Overweight
 
 # Program 2: Color Mixer
+Inputs                Expected result                     Actual result                     Match or correction
+
+red, blue               purple                               purple                                match
+
+red, yellow              orange                                orange                               match
+
+blue, yellow              green                                green                               match
+
+blue, red                 purple                             purple                               match
+
+yellow, red               orange                           orange                               match
+
+yellow, blue                green                            green                               match
+
+red, red                   red                               red                               match
+
+blue, blue                   blue                               blue                               match
+
+yellow, yellow              yellow                          yellow                               match
+
+orange, blue            Error message                        Error message                               match
+
+red, orange            Error message                        Error message                               match
+
+my result:
 Enter the first color: blue
 Enter the second color: red
 The resulting color is: purple
@@ -26,7 +68,7 @@ The resulting color is: purple
 The formula uses the person's weight in pounds and height in inches to calculate BMI. Height is multiplied by itself because the formula requires the height squared.
 
 2. How do your conditions handle exactly 18.5 and exactly 25.0?
-The program uses bmi < 18.5 for Underweight and bmi <= 25.0 for Optimal weight. This means both 18.5 and 25.0 belong to the Optimal weight category.
+The program uses bmi <= 18.5 for Underweight and bmi <= 25.0 for Optimal weight. This means both 18.5 and 25.0 belong to the Optimal weight category.
 
 3. Why do you check weight and height before calculating BMI?
 I check both values to make sure they are greater than zero. This prevents the program from calculating BMI using invalid numbers.
